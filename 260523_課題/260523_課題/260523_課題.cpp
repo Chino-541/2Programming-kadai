@@ -4,6 +4,7 @@
 #include"input.h"
 #include"judge.h"
 
+//ダヌアルタ　ケンドリック
 
 int main()
 {
