@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{335a075a-b7fe-431d-b70f-95a1d8cc0966}</ProjectGuid>
-    <RootNamespace>My01オーバーロード2</RootNamespace>
+    <ProjectGuid>{d3b46c89-5078-42c3-a9e8-9ffb40fd8191}</ProjectGuid>
+    <RootNamespace>My02インスタンス</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,11 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01  オーバーロード -2.cpp" />
-    <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="02 インスタンス.cpp" />
+    <ClCompile Include="Chara.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Vector2.h" />
+    <ClInclude Include="Chara.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
