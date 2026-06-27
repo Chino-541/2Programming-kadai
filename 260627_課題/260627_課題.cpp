@@ -5,23 +5,27 @@
 
 int main()
 {
+	//ランダム
 	RandomNumber ran;
 	ran.RanNum();
 	ran.RanNumDisplay();
 
+	//インプット
 	InputNumber in;
 	Kekka keka;
 
 	int kurikaeshi = 0; 
 
+	//繰り返し
 	while (true)
 	{
-		//繰り返し回数
+		
 		kurikaeshi++;
 		
 		in.InpNum();
 		in.InpNumDisplay();
 
+		//結果
 		keka.Hikaku(ran.number, in.input);
 		keka.KekkaDisplay();
 
@@ -31,7 +35,8 @@ int main()
 		}
 	}
 
-	printf("\nゲームクリア！\n");
+	//クリア
+	printf("ゲームクリア！\n");
 	printf("繰り返し回数: %d 回\n", kurikaeshi);
 
 	return 0;
