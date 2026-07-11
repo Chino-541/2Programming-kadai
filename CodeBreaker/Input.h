@@ -1,7 +1,9 @@
 #pragma once
 
+
+#include"Number.h"
 //入力値を保持するクラス
-class Input
+class Input : public Number
 {
 public:
 	//入力値をもらう
@@ -9,10 +11,10 @@ public:
 
 
 	//他に渡す
-	void GetInputValue(int* _IV, int _Size);
+	//void GetInputValue(int* _IV, int _Size);
 
-private:
-	int _InputValue[4]; //0-9までの４つのインプット値
+//private:
+	//int _InputValue[4]; //0-9までの４つのインプット値
 
 
 };

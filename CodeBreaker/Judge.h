@@ -1,7 +1,6 @@
 ﻿#pragma once
 
-#include"Random.h"
-#include"Input.h"
+#include"Number.h"
 #include"Result.h"
 
 //ランダム値と⼊⼒値を⽐較するクラス
@@ -14,7 +13,7 @@ public:
 
 
 	//情報を受け取って、⽐較して、結果を教える
-	Result Compare(const Random& rand, const Input& inp);
+	Result Compare(const Number& rand, const Number& inp);
 
 private:
 	int _Try; //回数

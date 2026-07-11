@@ -127,12 +127,14 @@
     <ClCompile Include="DispResult.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Judge.cpp" />
+    <ClCompile Include="Number.cpp" />
     <ClCompile Include="Random.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DispResult.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Judge.h" />
+    <ClInclude Include="Number.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="Result.h" />
   </ItemGroup>

@@ -2,15 +2,15 @@
 
 
 
-Result Judge::Compare(const Random& rand, const Input& inp)
+Result Judge::Compare(const Number& rand, const Number& inp)
 {
 	_Try++;
 	int _rn[4];
 	int _in[4];
 
 
-	rand.GetRandomValue(_rn, 4);
-	inp.GetInputValue(_rn, 4);
+	rand.getValue(_rn, 4);
+	inp.getValue(_rn, 4);
 
 	bool _isHit[4] = {};
 	int _HitNum = 0;

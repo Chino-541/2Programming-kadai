@@ -8,7 +8,7 @@ void Random::GenerateRandomValue()
 	srand((unsigned int)time(NULL));
 	for (int i = 0; i < 4; i++)
 	{
-		_Value[i] = rand() % 10;
+		_Value\[i] = rand() % 10;
 
 
 		//すでに過去使われているかどうかをチェック
@@ -24,10 +24,10 @@ void Random::GenerateRandomValue()
 	}
 
 }
-void Random::GetRandomValue(int* _V, int _Size)
-{
-	for (int i = 0; i < _Size && i< 4 ; i++)
-	{
-		_V[i] = _Value[i];
-	}
-}
+//void Random::GetRandomValue(int* _V, int _Size)
+//{
+	//for (int i = 0; i < _Size && i< 4 ; i++)
+	//{
+	//	_V[i] = _Value[i];
+	//}
+//}
