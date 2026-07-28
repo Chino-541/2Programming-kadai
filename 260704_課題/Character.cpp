@@ -1,18 +1,18 @@
 #include "Character.h"
 
-Character::Character(std::string _name, int _power)
+Character::Character(std::string _type, int _attack)
 {
-	_CharacterName = _name;
-	_CharacterPower = _power;
+	_CharacterType = _type;
+	_CharacterAttack = _attack;
 }
 
 std::string 
-Character::_getCharacterName()
+Character::_CharType()
 {
-	return _CharacterName;
+	return _CharacterType;
 }
 
-int Character::_getCharacterPower()
+int Character::_CharAttack()
 {
-	return _CharacterPower;
+	return _CharacterAttack;
 }

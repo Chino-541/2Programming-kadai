@@ -4,20 +4,20 @@
 class Character
 {
 protected:
-	std::string _CharacterName;
-	int _CharacterPower;
+	std::string _CharacterType = {};
+	int _CharacterAttack = 0;
 
 public:
-	Character(std::string _name, int _power);
+	Character(std::string _Type, int _Attack);
 
 	//デストラクタ
-	virtual ~Character(){};
+	~Character(){};
 
 	//kenshi, mahou, shoukan
 	//virtual std::string _CharacterType();
 
-	std::string _getCharacterName();
-	int _getCharacterPower();
+	virtual std::string _CharType();
+	virtual int _CharAttack();
 
 };
 
