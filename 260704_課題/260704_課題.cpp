@@ -18,19 +18,26 @@ int main()
     std::cout << "簡易ゲーム制作" << std::endl;
     std::cout << "制作者：" << _CBlue <<"ダヌアルタ　ケンドリック" << _CNormal << std::endl;
     std::cout << "==========" << std::endl;
+    std::cout << "ゲームスタート" << std::endl;
 
+    //char
     Character* _kenshi = new Character("剣士", 35);
     Character* _Mahou = new Character("魔法使い", 40);
     Character* _Shoukan = new Character("召喚士", 25);
 
+    int _Turn = 0;
 
+    //tower
     int _Power = 300;
     //int EnemyPower = 300;
     int _EnemyPower = _Power;
 
+    //loop==========================
     //powercheck
+    std::cout << "ターン：" << _Turn << std::endl;
     std::cout << "陣営の戦力：" << _Power << std::endl;
     std::cout << "敵の陣営の戦力：" << _EnemyPower << std::endl;
+    std::cout << "==========" << std::endl;
     //charlist
 
     std::cout << "キャラクターリスト：" << std::endl;
@@ -53,22 +60,69 @@ int main()
             std::cout << _kenshi->_CharType() << "を選びました" << std::endl;
             break;
         case 2:
-
+            std::cout << _Mahou->_CharType() << "を選びました" << std::endl;
+            break;
+        case 3:
+            std::cout << _Shoukan->_CharType() << "を選びました" << std::endl;
+            break;
 
         default:
+            std::cout << "キャラクターの番号を入力してください" << std::endl;
+            std::cout << "(1)剣士　(2)魔法使い　(3)召喚士" << std::endl;
             continue;
-
         }
         break;
     }
-    
-    
+    //attack defense
+    std::cout << "==========" << std::endl;
+    std::cout << "攻撃または防御を選んでください" << std::endl;
+    std::cout << "(1)攻撃　(2)防御" << std::endl;
 
-   
+    int _CharAction;
+    while (true)
+    {
+        scanf_s("%d", &_CharAction);
+        switch (_CharAction)
+        {
+        case 1:
+            std::cout << _PickChar << "を攻撃する" << std::endl;
+            break;
+        case 2:
+            std::cout << _PickChar << "を防御する" << std::endl;
+            break;
+        
+        default://belum diubah 
+            std::cout << "キャラクターの番号を入力してください" << std::endl;
+            std::cout << "(1)剣士　(2)魔法使い　(3)召喚士" << std::endl;
+            continue;
+        }
+        break;
+    }
+
 
     //enemycharpick
-
-    //attack defense
+    std::cout << "==========" << std::endl;
+    std::cout << "敵のキャラクター" << std::endl;
+    srand((unsigned int)time(NULL));
+    int _EnemyChar;
+    _EnemyChar = rand() % 3 + 1;
+    switch (_EnemyChar)
+    {
+    case 1:
+        std::cout << "敵が" << _kenshi->_CharType() << "を選びました" << std::endl;
+        break;
+    case 2:
+        std::cout << "敵が" << _Mahou->_CharType() << "を選びました" << std::endl;
+        break;
+    case 3:
+        std::cout << "敵が" << _Shoukan->_CharType() << "を選びました" << std::endl;
+        break;
+    default:
+        break;
+    }
+    std::cout << "==========" << std::endl;
+    
+    
 
     //result
 
