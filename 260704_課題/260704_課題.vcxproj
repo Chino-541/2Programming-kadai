@@ -126,11 +126,14 @@
   <ItemGroup>
     <ClCompile Include="260704_課題.cpp" />
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="Kenshi.cpp" />
+    <ClCompile Include="CharPick.cpp" />
+    <ClCompile Include="EnemyCharPick.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
-    <ClInclude Include="Kenshi.h" />
+    <ClInclude Include="CharPick.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="EnemyCharPick.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
