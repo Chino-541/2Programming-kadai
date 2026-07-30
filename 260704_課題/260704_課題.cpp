@@ -20,12 +20,14 @@ int main()
     std::cout << "==========" << std::endl;
     std::cout << "ゲームスタート" << std::endl;
 
+    srand((unsigned int)time(NULL));
+
     //char
     Character* _kenshi = new Character("剣士", 35);
     Character* _Mahou = new Character("魔法使い", 40);
     Character* _Shoukan = new Character("召喚士", 25);
 
-    int _Turn = 0;
+    int _Turn = 1;
 
     //tower
     int _Power = 300;
@@ -121,8 +123,8 @@ int main()
                     break;
 
                 default://belum diubah 
-                    std::cout << "キャラクターの番号を入力してください" << std::endl;
-                    std::cout << "(1)剣士　(2)魔法使い　(3)召喚士" << std::endl;
+                    std::cout << "攻撃するか？　防御するか？" << std::endl;
+                    std::cout << "(1)攻撃　(2)防御" << std::endl;
                     continue;
                 }
                 break;
@@ -132,7 +134,7 @@ int main()
             //enemycharpick
             std::cout << "==========" << std::endl;
             std::cout << "敵のキャラクター" << std::endl;
-            srand((unsigned int)time(NULL));
+            
             int _EnemyChar;
             int _EnemyDamage;
             _EnemyChar = rand() % 3 + 1;
@@ -174,7 +176,7 @@ int main()
             if (_CharAction == _EnemyAction)
             {
                 //attack
-                if (_CharAction && _EnemyAction == 1)
+                if (_CharAction == 1 && _EnemyAction == 1)
                 {
                     std::cout << "お互い攻撃をする" << std::endl;
                     if (_Damage > _EnemyDamage)
@@ -183,10 +185,14 @@ int main()
                         std::cout << "攻撃力が相手より高いので、相手に" << _Damage << "ダメージを与えた" << std::endl;
 
                     }
-                    else
+                    else if (_Damage < _EnemyDamage)
                     {
                         _Power -= _EnemyDamage;
                         std::cout << "攻撃力が相手より低いので、" << _EnemyDamage << "ダメージを受けた" << std::endl;
+                    }
+                    else
+                    {
+                        std::cout << "攻撃力が同じなので、ドロー" << std::endl;
                     }
                 }
                 //Defense
@@ -212,7 +218,7 @@ int main()
                         if (_PickChar == 2 && _EnemyChar == 1 || _PickChar == 3 && _EnemyChar == 2 || _PickChar == 1 && _EnemyChar == 3)
                         {
                             std::cout << "クリティカル攻撃" << std::endl;
-                            _EnemyPower / 2;
+                            _EnemyPower /= 2;
                         }
                         //shoukan, enemy kenshi
                         else
@@ -229,7 +235,7 @@ int main()
                         if (_EnemyChar == 2 && _PickChar == 1 || _EnemyChar == 3 && _PickChar == 2 || _EnemyChar == 1 && _PickChar == 3)
                         {
                             std::cout << "クリティカル攻撃を受けた" << std::endl;
-                            _Power / 2;
+                            _Power /= 2;
                         }
                         else
                         {
@@ -268,7 +274,11 @@ int main()
     std::cout << _Power << std::endl;
     */
 
-    
+	delete _kenshi;
+	delete _Mahou;
+	delete _Shoukan;
 
+
+    return 0;
    
 }
